@@ -1,0 +1,15 @@
+POST http://localhost:9200/people/_search
+Content-Type: application/json
+
+{
+  "query":{
+    "match":{
+      "title":"ElasticSearch"
+    }
+  } ,
+  "sort":{
+    "publish_date":{"order":"asc"}
+  }
+}
+
+###
